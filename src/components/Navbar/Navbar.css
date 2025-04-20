@@ -64,3 +64,58 @@
 .search-link:hover {
   background-color: #005fa3;
 }
+
+/* الزر الخاص بالقائمة */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* الوضع الطبيعي للروابط */
+.nav-links {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+/* الوضع المخفي للموبايل */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #202430;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .search_section {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .logo {
+    width: auto;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
